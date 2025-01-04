@@ -1,0 +1,8 @@
+3 2 4
+SAB
+ab
+S->ASBS
+A->a
+B->b
+S->_
+S
