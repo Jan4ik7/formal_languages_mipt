@@ -10,9 +10,11 @@
 
 ### Компиляция без тестов  
 
+Для запуска лучше всего использовать 17 плюсы, у некоторых без них не компилируется
+
 Если вы хотите собрать парсер без тестов, используйте команду:  
 
-```g++ -g ./src/main.cpp ./src/Earley.cpp ./src/Grammar.cpp -o execute_me.out```
+```g++ -g -std=c++17 ./src/main.cpp ./src/Earley.cpp ./src/Grammar.cpp -o execute_me.out```
 
 Теперь вы найдете исполняемый файл с именем `execute_me.out`.  
 

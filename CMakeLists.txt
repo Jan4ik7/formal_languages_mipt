@@ -3,7 +3,7 @@ project(CoverageTest)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
@@ -15,7 +15,7 @@ add_library(Parse STATIC src/Grammar.hpp src/Grammar.cpp src/Earley.hpp src/Earl
 add_dependencies(Parse gtest gtest_main)
 
 # create the test executable
-add_executable(TestParser tests/tests_main.cpp)
+add_executable(TestParser tests/main.cpp tests/tests.cpp)
 target_include_directories(TestParser PRIVATE googletest/googletest)
 target_link_libraries(TestParser PRIVATE
 Parse gtest gtest_main)
